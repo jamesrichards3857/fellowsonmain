@@ -1,42 +1,40 @@
-/* General Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Typography */
 body {
   font-family: 'Cactus Classical Serif', serif;
   color: #000;
-  background: #fff;
+  background: #FAF9F6; /* Off-white */
   line-height: 1.6;
   scroll-behavior: smooth;
 }
 
-/* Links & Accents */
+/* Links and Accents */
 a {
-  color: #1E4120;
+  color: #2F325D;
   transition: color 0.3s ease;
 }
 a:hover {
-  color: #347a4b;
+  color: #45497A;
 }
 
-/* Header (Fixed Green Bar) */
+/* Header */
 .site-header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: #1E4120;
-  color: #fff;
+  background: #2F325D;
+  color: #FAF9F6;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
   z-index: 1000;
 }
-.site-header .logo {
+.logo {
   font-weight: 600;
   font-size: 1.3rem;
 }
@@ -45,30 +43,27 @@ a:hover {
   display: flex;
   gap: 20px;
 }
+.site-nav li {
+  border: 1px solid #FAF9F6; /* outline around nav items */
+  padding: 5px 10px;
+  border-radius: 4px;
+}
 .site-nav a {
-  color: #fff;
+  color: #FAF9F6;
   font-weight: 500;
 }
 .site-nav a:hover {
   text-decoration: underline;
 }
 
-/* Hero Section */
+/* Hero Section (Logo Only) */
 .hero {
   height: 70vh;
   background: url('images/hero.jpg') center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  color: #fff;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
-  padding-top: 70px; /* Offset fixed header */
-}
-.hero-inner {
-  background: rgba(0,0,0,0.4);
-  padding: 30px;
-  border-radius: 10px;
+  padding-top: 70px;
 }
 
 /* Sections */
@@ -77,49 +72,51 @@ a:hover {
   max-width: 1000px;
   margin: auto;
   text-align: center;
-  position: relative;
 }
 h2 {
-  color: #1E4120;
+  color: #2F325D;
   margin-bottom: 20px;
   font-size: 2rem;
 }
 blockquote {
   margin-top: 20px;
   font-style: italic;
-  color: #347a4b;
+  color: #45497A;
 }
 
-/* Green Accented Lists and Buttons */
-.menu-list li strong {
-  color: #1E4120;
-}
+/* Buttons */
 button, .btn {
-  background: #1E4120;
-  color: #fff;
+  background: #2F325D;
+  color: #FAF9F6;
   border: none;
   padding: 12px 24px;
   border-radius: 5px;
   transition: background 0.3s ease;
 }
 button:hover, .btn:hover {
-  background: #347a4b;
+  background: #45497A;
 }
 
-/* Seasonal Panel */
+/* Seasonal */
 .wood-panel {
   background: url('images/wood-panel.jpg') center/cover no-repeat;
-  color: #fff;
+  color: #FAF9F6;
+}
+.seasonal-items img {
+  width: 80%;
+  max-width: 250px;
+  border-radius: 8px;
 }
 
 /* Gallery */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
   gap: 20px;
 }
 .gallery-grid img {
-  width: 100%;
+  width: 90%;
+  max-width: 250px;
   border-radius: 10px;
   transition: transform 0.4s ease;
 }
@@ -134,29 +131,30 @@ button:hover, .btn:hover {
   gap: 40px;
 }
 .member img {
-  width: 100%;
+  width: 80%;
+  max-width: 180px;
   border-radius: 50%;
-  border: 3px solid #1E4120;
+  border: 3px solid #2F325D;
 }
 .member h3 {
   margin-top: 15px;
-  color: #1E4120;
+  color: #2F325D;
 }
 
 /* Footer */
 .site-footer {
   background: #000;
-  color: #fff;
+  color: #FAF9F6;
   text-align: center;
   padding: 60px 20px;
 }
 .cross-divider {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  color: #1E4120;
+  color: #2F325D;
 }
 
-/* Transitions & Animations */
+/* Animation */
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
@@ -167,10 +165,9 @@ button:hover, .btn:hover {
   transform: translateY(0);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .site-nav ul {
     flex-direction: column;
-    background: #1E4120;
+    background: #2F325D;
   }
 }
